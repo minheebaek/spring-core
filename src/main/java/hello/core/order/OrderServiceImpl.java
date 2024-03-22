@@ -11,6 +11,8 @@ public class OrderServiceImpl implements OrderService {
     private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
     private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
     */
+
+    //OCP,DIP 만족
     private final MemberRepository memberRepository; //final 있으면 기본으로 하든 암튼 생성자를 통해 할당 되어야함
     private final DiscountPolicy discountPolicy; //구체에 의존하지 않고 추상화에만 의존함 이러면 구체 객체를 만들지 않아서 널포인트익셉션 생김, 생성자 주입해야됨
 
